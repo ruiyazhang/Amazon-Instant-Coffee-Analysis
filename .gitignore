@@ -1,1 +1,5 @@
 scrapy.cfg
+/instant_coffee/__pycache__/
+/instant_coffee/documentation
+
+
