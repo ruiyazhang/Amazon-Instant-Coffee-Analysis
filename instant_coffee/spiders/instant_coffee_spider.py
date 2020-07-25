@@ -11,7 +11,9 @@ class InstantCoffeeSpider(Spider):
     def parse(self, response):
         
         url_list = [f'https://www.amazon.com/s?k=Instant+Coffee&i=grocery&rh=n%3A2251594011&page={i}&_encoding=UTF8&c=ts&qid=1594936799&ts_id=2251594011&ref=sr_pg_{i}' for i in range(1,192)]
-
+        
+        # url = 'https://www.amazon.com/s?k=Instant+Coffee&i=grocery&rh=n%3A2251594011&page=10&_encoding=UTF8&c=ts&qid=1594936799&ts_id=2251594011&ref=sr_pg_10'
+        
         for url in url_list:
             yield Request(url=url, callback=self.parse_results_page)
     
